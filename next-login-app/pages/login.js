@@ -16,9 +16,15 @@ function LoginPage() {
     });
   };
 
+  //  print creds in console
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(credentials);
+  };
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           name="email"
           type="email"
