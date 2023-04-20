@@ -1,7 +1,7 @@
 import React from "react";
 
-function index() {
-  return <div className="text-6xl">index</div>;
+function IndexPage() {
+  return <div>Home</div>;
 }
 
-export default index;
+export default IndexPage;
