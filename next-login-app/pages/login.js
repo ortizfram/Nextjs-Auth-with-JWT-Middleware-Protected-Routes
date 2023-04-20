@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 
 function LoginPage() {
@@ -17,9 +18,12 @@ function LoginPage() {
   };
 
   //  print creds in console
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(credentials);
+    // send to backend
+    const response = await axios.post("/api/auth/login", credentials);
+    console.log(response);
   };
 
   return (
